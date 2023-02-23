@@ -183,7 +183,7 @@ countdows = ref(setInterval(() => {
 <!-- start game -->
       <div class="w-full h-full" :class="dsinone ? 'show' : 'none'">
         <div class="flex w-full h-1/6 justify-start ">
-          <div class="flex h-2/6 ml-4 "><img src="./assets/gameLogo.png"></div>
+          <div class="flex h-2/6 ml-4 "><img src="./assets/gameLogo.png" @click="dsinone = !dsinone , player = ''"></div>
         </div>
         <div class="flex w-full h-3/5 " v-if="time != 0">
           <div class="flex w-1/3 h-full justify-end">
@@ -248,7 +248,7 @@ countdows = ref(setInterval(() => {
         <div class="flex w-full h-1/6  justify-center" v-if="time != 0">
           <div class="flex w-1/4 h-full  items-center justify-center space-x-4">
             <button class=" btn w-2/5 capitalize" style="background-color: #AC9C48"
-              @click="dsinone = !dsinone, score = 0">Main menu</button>
+              @click="dsinone = !dsinone, score = 0, player =''">Main menu</button>
             <button class=" btn w-2/5 capitalize" style="background-color: #AC9C48" @click="score = 0, time = 60">Restart
               Game</button>
           </div>
@@ -267,7 +267,7 @@ countdows = ref(setInterval(() => {
             </div>
             <div class="flex w-full h-1/6  items-center justify-center space-x-4">
               <button class=" btn w-2/5 capitalize" style="background-color: #AC9C48"
-                @click="dsinone = !dsinone, score = 0">Main menu</button>
+                @click="dsinone = !dsinone, score = 0, player = ''">Main menu</button>
               <button class=" btn w-2/5 capitalize" style="background-color: #AC9C48" @click="score = 0, time = 60">Restart
                 Game</button>
             </div>
